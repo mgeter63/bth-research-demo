@@ -7,17 +7,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital@1&display=swap" rel="stylesheet">
 <style>
 :root {
-  --plum: #4A235A;
-  --plum-dark: #2D0F3A;
-  --gold: #D4AF37;
-  --gold-light: #EBCD64;
-  --cream: #F0E4C8;
-  --sand: #DACDA8;
+  --plum: #5B4B8A;
+  --plum-dark: #4A3A7A;
+  --gold: #9B8DD0;
+  --gold-light: #DDD5F5;
+  --cream: #F0EEFF;
+  --sand: #8B7BAA;
   --white: #FFFFFF;
-  --bg: #F8F5FB;
-  --dark: #1A1A2E;
-  --gray: #6B6B7B;
-  --border: #E2D9ED;
+  --bg: #F7F5FF;
+  --dark: #2D2350;
+  --gray: #5A5070;
+  --border: #C9BEE8;
   --green: #2E7D32;
   --red: #C62828;
   --amber: #F57F17;
@@ -59,7 +59,7 @@ body {
 /* ── PROGRESS BAR ── */
 .progress-strip {
   height: 3px;
-  background: rgba(74,35,90,0.15);
+  background: rgba(91,75,138,0.15);
   position: relative;
 }
 .progress-fill-strip {
@@ -127,7 +127,7 @@ body {
   padding: 18px;
   margin-bottom: 13px;
   border: 1px solid var(--border);
-  box-shadow: 0 1px 6px rgba(74,35,90,0.06);
+  box-shadow: 0 1px 6px rgba(91,75,138,0.06);
 }
 .card-title {
   font-size: 12px;
@@ -187,7 +187,7 @@ select:focus, input:focus { border-color: var(--plum); background-color: var(--w
 }
 .check-item.selected {
   border-color: var(--plum);
-  background: rgba(74,35,90,0.05);
+  background: rgba(91,75,138,0.05);
 }
 .check-box {
   width: 20px;
@@ -279,17 +279,18 @@ input[type="range"]::-moz-range-thumb {
 
 /* ── DISCLAIMER ── */
 .disclaimer {
-  background: rgba(74,35,90,0.05);
+  background: #EDE9FF;
   border-radius: 12px;
-  padding: 13px;
-  font-size: 11px;
-  color: var(--gray);
+  padding: 14px;
+  font-size: 12px;
+  color: #3D2B6B;
   text-align: center;
   margin-top: 10px;
-  line-height: 1.6;
-  border: 1px solid var(--border);
+  line-height: 1.7;
+  border: 1px solid #B8A9E0;
 }
-.disclaimer strong { color: var(--plum); }
+.disclaimer strong { color: #4A3A7A; font-weight: 700; }
+.disclaimer span { color: #5A5070; }
 
 /* ── INTRO SCREEN ── */
 .intro-hero {
@@ -365,7 +366,7 @@ input[type="range"]::-moz-range-thumb {
 .b-severe { background: rgba(198,40,40,0.35); color: #EF9A9A; }
 .score-bar-track { background: rgba(255,255,255,0.12); border-radius: 4px; height: 7px; overflow: hidden; margin-bottom: 6px; }
 .score-bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 4px; transition: width 0.9s ease; }
-.score-interp { font-size: 11px; color: var(--gold-light); font-style: italic; }
+.score-interp { font-size: 12px; color: #DDD5F5; font-style: italic; }
 
 .phq-flag {
   background: rgba(198,40,40,0.08);
@@ -414,12 +415,15 @@ input[type="range"]::-moz-range-thumb {
   grid-template-columns: 1fr 1fr;
   gap: 8px;
   margin-top: 4px;
+  width: 100%;
 }
 .hair-field {
   background: var(--bg);
   border-radius: 8px;
   padding: 10px 12px;
   border: 1px solid var(--border);
+  display: block;
+  min-height: 50px;
 }
 .hair-field-name { font-size: 10px; color: var(--gray); margin-bottom: 3px; }
 .hair-field-val { font-size: 12px; font-weight: 600; color: var(--plum); }
@@ -449,7 +453,7 @@ input[type="range"]::-moz-range-thumb {
   border-left: 4px solid var(--gold);
 }
 .possible-title { font-size: 12px; font-weight: 700; color: var(--plum); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; }
-.possible-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 13px; color: var(--plum-dark); line-height: 1.5; }
+.possible-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 13px; color: #2D2350; line-height: 1.5; }
 .possible-item:last-child { margin-bottom: 0; }
 .possible-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
 
@@ -458,7 +462,7 @@ input[type="range"]::-moz-range-thumb {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(45,15,58,0.92);
+  background: rgba(61,43,107,0.92);
   z-index: 200;
   align-items: center;
   justify-content: center;
@@ -590,11 +594,11 @@ input[type="range"]::-moz-range-thumb {
           style="width:100%;-webkit-appearance:none;appearance:none;height:10px;border-radius:5px;background:linear-gradient(90deg,#4CAF50,#FFC107,#F44336);outline:none;border:none;padding:0;margin:0;display:block;cursor:default;pointer-events:none;"
           readonly>
         <style>
-          #sev::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;background:#2D0F3A;border:3px solid #D4AF37;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.3);}
-          #sev::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#2D0F3A;border:3px solid #D4AF37;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.3);}
+          #sev::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;background:#3D2B6B;border:3px solid #D4AF37;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.3);}
+          #sev::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#3D2B6B;border:3px solid #D4AF37;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.3);}
         </style>
         <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
-          <div style="font-size:32px;font-weight:700;color:#4A235A;line-height:1;" id="sevVal">0</div>
+          <div style="font-size:32px;font-weight:700;color:#5B4B8A;line-height:1;" id="sevVal">0</div>
           <div style="font-size:12px;color:#6B6B7B;text-align:right;max-width:200px;" id="sevTxt">No symptoms reported</div>
         </div>
         <div style="text-align:center;font-size:11px;color:var(--gray);margin-top:6px;font-style:italic;">Score updates automatically based on symptoms selected</div>
@@ -648,16 +652,156 @@ input[type="range"]::-moz-range-thumb {
       </select>
     </div>
 
-    <button class="btn btn-plum" onclick="submitEntry()">Submit Entry — View Research Output →</button>
-    <div class="disclaimer" style="margin-top:12px;">
-      <strong>Demo:</strong> No information is collected or stored anywhere.
+    <button class="btn btn-plum" onclick="goToHair()">Continue — Hair Profile →</button>
+    <div style="background:#EDE9FF;border-radius:12px;padding:13px;font-size:12px;color:#3D2B6B;text-align:center;margin-top:12px;line-height:1.6;border:1px solid #B8A9E0;">
+      <strong style="color:#4A3A7A;">Demo Mode:</strong> No information is collected or stored anywhere.
     </div>
   </div>
 </div>
 
+
 <!-- ══════════════════════════
-     SCREEN 3 — RESEARCHER OUTPUT
+     SCREEN 2.5 — HAIR PROFILE
 ══════════════════════════ -->
+<div class="screen" id="s-hair">
+  <div class="steps">
+    <div class="step-pip done"></div>
+    <div class="step-pip active pending" style="width:28px;"></div>
+    <div class="step-pip pending"></div>
+    <div class="step-pip pending"></div>
+  </div>
+
+  <div style="background:#5B4B8A;padding:16px 18px;border-bottom:3px solid #C9BEE8;">
+    <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#DDD5F5;margin-bottom:4px;">Step 2 of 4 — Hair Profile</div>
+    <div style="color:#FFFFFF;font-size:20px;font-weight:700;font-family:'DM Sans',sans-serif;">Hair Profile</div>
+    <div style="color:#C9BEE8;font-size:12px;margin-top:3px;">Tell us about your hair care history</div>
+  </div>
+
+  <div style="padding:16px 18px;background:#F7F5FF;">
+
+    <!-- RACE IDENTITY -->
+    <div style="background:#FFFFFF;border-radius:14px;padding:18px;margin-bottom:14px;border:1px solid #C9BEE8;">
+      <div style="font-size:12px;font-weight:700;color:#5B4B8A;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #DDD5F5;">How Do You Identify?</div>
+      <p style="font-size:12px;color:#6B6080;margin-bottom:14px;">Select one. Your styling options will update based on your selection.</p>
+      <div id="raceList" style="display:flex;flex-direction:column;gap:7px;">
+        <div class="check-item" data-sym="Black or African American" onclick="toggleRace(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:all 0.15s;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div style="font-size:13px;color:#2D2350;">Black or African American</div>
+        </div>
+        <div class="check-item" data-sym="White or Caucasian" onclick="toggleRace(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:all 0.15s;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div style="font-size:13px;color:#2D2350;">White or Caucasian</div>
+        </div>
+        <div class="check-item" data-sym="Hispanic or Latina" onclick="toggleRace(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:all 0.15s;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div style="font-size:13px;color:#2D2350;">Hispanic or Latina</div>
+        </div>
+        <div class="check-item" data-sym="Asian or Pacific Islander" onclick="toggleRace(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:all 0.15s;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div style="font-size:13px;color:#2D2350;">Asian or Pacific Islander</div>
+        </div>
+        <div class="check-item" data-sym="Native American or Alaska Native" onclick="toggleRace(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:all 0.15s;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div style="font-size:13px;color:#2D2350;">Native American or Alaska Native</div>
+        </div>
+        <div class="check-item" data-sym="Middle Eastern or North African" onclick="toggleRace(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:all 0.15s;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div style="font-size:13px;color:#2D2350;">Middle Eastern or North African</div>
+        </div>
+        <div class="check-item" data-sym="Multiracial or Mixed Heritage" onclick="toggleRace(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:all 0.15s;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div style="font-size:13px;color:#2D2350;">Multiracial or Mixed Heritage</div>
+        </div>
+        <div class="check-item" data-sym="Another identity not listed here" onclick="toggleRace(this);showWriteIn('raceWriteIn',this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:all 0.15s;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div style="font-size:13px;color:#2D2350;">Another identity not listed here</div>
+        </div>
+        <div id="raceWriteIn" style="display:none;margin-top:6px;">
+          <input type="text" id="raceOtherText" placeholder="Please describe your identity..." 
+            style="width:100%;padding:11px 14px;border:1.5px solid #7B6BC0;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;color:#2D2350;background:#FFFFFF;outline:none;">
+        </div>
+      </div>
+    </div>
+
+    <!-- STYLING PRACTICES — dynamic -->
+    <div style="background:#FFFFFF;border-radius:14px;padding:18px;margin-bottom:14px;border:1px solid #C9BEE8;">
+      <div style="font-size:12px;font-weight:700;color:#5B4B8A;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #DDD5F5;">Styling Practices</div>
+      <p style="font-size:12px;color:#6B6080;margin-bottom:14px;">Select all that apply to your regular hair care routine.</p>
+      <div id="styleList" style="display:flex;flex-direction:column;gap:7px;">
+        <p style="font-size:13px;color:#6B6080;font-style:italic;text-align:center;padding:12px 0;">Select your identity above to see relevant styling options.</p>
+      </div>
+    </div>
+
+    <!-- TREATMENT — MULTI SELECT -->
+    <div style="background:#FFFFFF;border-radius:14px;padding:18px;margin-bottom:14px;border:1px solid #C9BEE8;">
+      <div style="font-size:12px;font-weight:700;color:#5B4B8A;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #DDD5F5;">Current Treatment</div>
+      <p style="font-size:12px;color:#6B6080;margin-bottom:14px;">Select all treatments you are currently using. Many patients use more than one.</p>
+      <div style="display:flex;flex-direction:column;gap:7px;" id="treatmentList">
+        <div class="check-item" data-tx="Topical corticosteroids" onclick="toggleTx(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div><div style="font-size:13px;color:#2D2350;">Topical Corticosteroids</div><div style="font-size:10px;color:#6B6080;">Anti-inflammatory — applied to scalp</div></div>
+        </div>
+        <div class="check-item" data-tx="Topical Minoxidil" onclick="toggleTx(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div><div style="font-size:13px;color:#2D2350;">Topical Minoxidil</div><div style="font-size:10px;color:#6B6080;">Applied to scalp to stimulate growth</div></div>
+        </div>
+        <div class="check-item" data-tx="Oral Minoxidil" onclick="toggleTx(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div><div style="font-size:13px;color:#2D2350;">Oral Minoxidil</div><div style="font-size:10px;color:#6B6080;">Low-dose pill form</div></div>
+        </div>
+        <div class="check-item" data-tx="Hydroxychloroquine (Plaquenil)" onclick="toggleTx(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div><div style="font-size:13px;color:#2D2350;">Hydroxychloroquine (Plaquenil)</div><div style="font-size:10px;color:#6B6080;">Oral anti-inflammatory — pill</div></div>
+        </div>
+        <div class="check-item" data-tx="Topical JAK Inhibitor" onclick="toggleTx(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div><div style="font-size:13px;color:#2D2350;">Topical JAK Inhibitor</div><div style="font-size:10px;color:#6B6080;">Applied to scalp</div></div>
+        </div>
+        <div class="check-item" data-tx="Oral JAK Inhibitor" onclick="toggleTx(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div><div style="font-size:13px;color:#2D2350;">Oral JAK Inhibitor</div><div style="font-size:10px;color:#6B6080;">Pill form — baricitinib or ritlecitinib</div></div>
+        </div>
+        <div class="check-item" data-tx="Intralesional Steroid Injections" onclick="toggleTx(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div><div style="font-size:13px;color:#2D2350;">Intralesional Steroid Injections</div><div style="font-size:10px;color:#6B6080;">Injected directly into scalp by dermatologist</div></div>
+        </div>
+        <div class="check-item" data-tx="Finasteride" onclick="toggleTx(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div><div style="font-size:13px;color:#2D2350;">Finasteride</div><div style="font-size:10px;color:#6B6080;">DHT blocker — oral pill</div></div>
+        </div>
+        <div class="check-item" data-tx="Dutasteride" onclick="toggleTx(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div><div style="font-size:13px;color:#2D2350;">Dutasteride</div><div style="font-size:10px;color:#6B6080;">DHT blocker — oral pill</div></div>
+        </div>
+        <div class="check-item" data-tx="No current treatment" onclick="toggleTx(this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div style="font-size:13px;color:#2D2350;">No current treatment</div>
+        </div>
+        <div class="check-item" data-tx="Other" onclick="toggleTx(this);showWriteIn('txWriteIn',this)" style="border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;">
+          <div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;"></div>
+          <div><div style="font-size:13px;color:#2D2350;">Other treatment</div><div style="font-size:10px;color:#6B6080;">Supplement, herbal, alternative therapy</div></div>
+        </div>
+        <div id="txWriteIn" style="display:none;margin-top:6px;">
+          <input type="text" id="txOtherText" placeholder="Please describe your treatment..." 
+            style="width:100%;padding:11px 14px;border:1.5px solid #7B6BC0;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;color:#2D2350;background:#FFFFFF;outline:none;">
+        </div>
+      </div>
+    </div>
+
+    <!-- ONSET DATE -->
+    <div style="background:#FFFFFF;border-radius:14px;padding:18px;margin-bottom:14px;border:1px solid #C9BEE8;">
+      <div style="font-size:12px;font-weight:700;color:#5B4B8A;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #DDD5F5;">Hair Loss History</div>
+      <label style="display:block;font-size:11px;font-weight:600;color:#5B4B8A;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:7px;">When Did Your Hair Loss Begin?</label>
+      <input type="date" id="hairOnset" style="width:100%;padding:12px 14px;border:1.5px solid #C9BEE8;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;background:#F7F5FF;color:#2D2350;outline:none;">
+    </div>
+
+    <button onclick="submitEntry()" style="width:100%;padding:16px;background:#5B4B8A;color:#FFFFFF;border:none;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;margin-top:4px;">Submit — View Research Output →</button>
+    <div style="background:#F7F5FF;border-radius:12px;padding:13px;font-size:11px;color:#6B6080;text-align:center;margin-top:10px;line-height:1.6;border:1px solid #C9BEE8;">
+      <strong style="color:#5B4B8A;">Demo:</strong> No information is collected or stored anywhere.
+    </div>
+  </div>
+</div>
+
 <div class="screen" id="s-output">
   <div class="steps">
     <div class="step-pip done"></div>
@@ -710,6 +854,7 @@ input[type="range"]::-moz-range-thumb {
       <div class="data-row"><div class="dk">Entry Timestamp</div><div class="dv" id="outDate">—</div></div>
       <div class="data-row"><div class="dk">Symptoms Reported</div><div class="dv" id="outSymptoms">—</div></div>
       <div class="data-row"><div class="dk">Severity Score (0-10)</div><div class="dv" id="outSev">—</div></div>
+      <div class="data-row"><div class="dk">Symptom Pattern</div><div class="dv" id="outPattern">—</div></div>
       <div class="data-row"><div class="dk">Symptom Pattern</div><div class="dv" id="outScalp">—</div></div>
       <div class="data-row"><div class="dk">QoL Impact (DLQI)</div><div class="dv" id="outQ1">—</div></div>
       <div class="data-row"><div class="dk">BTH-QoL Total</div><div class="dv hi" id="outQol2">—</div></div>
@@ -717,23 +862,20 @@ input[type="range"]::-moz-range-thumb {
       <div class="data-row"><div class="dk">PHQ-2 Item 2</div><div class="dv" id="outP2">—</div></div>
       <div class="data-row"><div class="dk">PHQ-2 Total</div><div class="dv" id="outPhqTotal">—</div></div>
       <div class="data-row"><div class="dk">Adverse Event Flag</div><div class="dv" id="outFlag">None</div></div>
-      <div class="data-row"><div class="dk">Supabase Record ID</div><div class="dv hi">sym_log_0000847</div></div>
+      <div class="data-row"><div class="dk">Research Record ID</div><div class="dv hi">BTH-REC-0000847</div></div>
     </div>
 
     <!-- HAIR PROFILE DATA CAPTURED -->
-    <div class="data-card">
-      <div class="data-card-hd">Hair Profile — Data Fields Captured Per Patient</div>
-      <div style="font-size:12px;color:var(--gray);margin-bottom:12px;font-style:italic;">Every registered patient completes a full Hair Profile. These structured fields are captured once and updated as conditions change.</div>
-      <div class="hair-fields">
-        <div class="hair-field"><div class="hair-field-name">Race / Ethnicity</div><div class="hair-field-val">8 identity options</div></div>
-        <div class="hair-field"><div class="hair-field-name">Hair Loss Onset</div><div class="hair-field-val">Date field — historical</div></div>
-        <div class="hair-field"><div class="hair-field-name">SA Type / Diagnosis</div><div class="hair-field-val">CCCA, LPP, FFA, DLE + more</div></div>
-        <div class="hair-field"><div class="hair-field-name">Styling Practices</div><div class="hair-field-val">Tension, heat, chemical, wigs</div></div>
-        <div class="hair-field"><div class="hair-field-name">Product Use</div><div class="hair-field-val">Scalp products, routines</div></div>
-        <div class="hair-field"><div class="hair-field-name">Treatment History</div><div class="hair-field-val">Rx and OTC — full record</div></div>
-        <div class="hair-field"><div class="hair-field-name">Cost & Spend</div><div class="hair-field-val">Monthly product expenditure</div></div>
-        <div class="hair-field"><div class="hair-field-name">Provider Relationship</div><div class="hair-field-val">Has dermatologist? Satisfaction?</div></div>
-      </div>
+    <div class="data-card" id="hairProfileOutput" style="display:block;width:100%;">
+      <div class="data-card-hd">Hair Profile — Structured Data Captured</div>
+      <div style="font-size:12px;color:var(--gray);margin-bottom:12px;font-style:italic;">This data is captured once per patient and updated as their condition changes over time.</div>
+      <div class="data-row"><div class="dk">Race / Ethnicity</div><div class="dv hi" id="outRace">—</div></div>
+      <div class="data-row"><div class="dk">Styling Practices</div><div class="dv" id="outStyle">—</div></div>
+      <div class="data-row"><div class="dk">Current Treatment</div><div class="dv" id="outTreatment">—</div></div>
+      <div class="data-row"><div class="dk">Hair Loss Onset</div><div class="dv" id="outOnset">—</div></div>
+      <div class="data-row"><div class="dk">SA Type / Diagnosis</div><div class="dv hi">Pending dermatologist confirmation</div></div>
+      <div class="data-row"><div class="dk">Product Expenditure</div><div class="dv">Captured at registration</div></div>
+      <div class="data-row"><div class="dk">Provider Relationship</div><div class="dv">Captured at registration</div></div>
     </div>
 
     <!-- POPULATION DATA -->
@@ -833,11 +975,11 @@ input[type="range"]::-moz-range-thumb {
 
     <button class="btn btn-outline" onclick="go('intro')" style="margin-top:8px;">← Start Demo Again</button>
 
-    <div class="disclaimer">
-      <strong>Beyond the Hairline Research Platform</strong><br>
-      CCDEW Nonprofit · Jackson, Mississippi<br>
-      USPTO Trademark Serial No. 99810808<br>
-      <span style="font-style:italic;">Demo Mode — No data collected or stored</span>
+    <div style="background:#EDE9FF;border-radius:12px;padding:16px;font-size:12px;color:#3D2B6B;text-align:center;margin-top:10px;line-height:1.8;border:1px solid #B8A9E0;">
+      <strong style="color:#4A3A7A;font-weight:700;font-size:13px;">Beyond the Hairline Research Platform</strong><br>
+      <span style="color:#5A5070;">CCDEW Nonprofit · Jackson, Mississippi</span><br>
+      <span style="color:#5A5070;">USPTO Trademark Serial No. 99810808</span><br>
+      <span style="color:#7B6BA0;font-style:italic;">Demo Mode — No data collected or stored</span>
     </div>
   </div>
 </div>
@@ -854,14 +996,181 @@ input[type="range"]::-moz-range-thumb {
 let symptoms = [];
 let qolTotal = 0;
 let phqTotal = 0;
+let raceSelections = [];
+let styleSelections = [];
+let treatmentSelections = [];
+
+// RESET DEMO
+function resetDemo() {
+  document.querySelectorAll('select').forEach(function(s) { s.value = ''; });
+  document.querySelectorAll('.check-item').forEach(function(b) {
+    b.classList.remove('selected');
+    var box = b.querySelector('.check-box');
+    if(box) { box.style.background=''; box.style.borderColor=''; }
+    b.style.borderColor='';
+    b.style.background='';
+  });
+  var sev = document.getElementById('sev');
+  if(sev) { sev.value = 0; updSev(0); }
+  symptoms = []; raceSelections = []; styleSelections = []; treatmentSelections = [];
+  qolTotal = 0; phqTotal = 0;
+  var styleList = document.getElementById('styleList');
+  if(styleList) styleList.innerHTML = '<p style="font-size:13px;color:#5A5070;font-style:italic;text-align:center;padding:12px 0;">Select your identity above to see relevant styling options.</p>';
+  var raceWriteIn = document.getElementById('raceWriteIn');
+  if(raceWriteIn) raceWriteIn.style.display = 'none';
+  var txWriteIn = document.getElementById('txWriteIn');
+  if(txWriteIn) txWriteIn.style.display = 'none';
+  go('intro');
+}
 
 // SCREEN NAVIGATION
 function go(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById('s-' + id).classList.add('active');
   window.scrollTo(0, 0);
-  const progs = { intro:0, patient:33, output:66, possible:100 };
+  const progs = { intro:0, patient:25, hair:50, output:75, possible:100 };
   document.getElementById('prog').style.width = progs[id] + '%';
+}
+
+// HAIR PROFILE SELECTIONS
+// Race to styling options mapping from real BTH research app
+var STYLING_BY_RACE = {
+  "Black or African American": ["None","Loose braids","Medium braids","Tight braids","Box braids","Knotless braids","Cornrows","Sisterlocks","Locs","Twists","Bantu knots","TWA or short natural","Crochet styles","Natural unmanipulated","Bun","Other"],
+  "White or Caucasian": ["None","Ponytail (loose)","Ponytail (tight)","Bun","Blowout","Natural loose","Other"],
+  "Hispanic or Latina": ["None","Loose braids","Bun","Ponytail (loose)","Natural unmanipulated","Blowout","Other"],
+  "Asian or Pacific Islander": ["None","Ponytail (loose)","Ponytail (tight)","Bun","Braid","Natural loose","Blowout","Other"],
+  "Native American or Alaska Native": ["None","Natural loose","Braid","Ponytail (loose)","Ponytail (tight)","Bun","Other"],
+  "Middle Eastern or North African": ["None","Natural loose","Bun","Ponytail (loose)","Braid","Blowout","Other"],
+  "Multiracial or Mixed Heritage": ["None","Natural loose","Twists","Loose braids","Ponytail (loose)","Bun","Blowout","Natural unmanipulated","Other"],
+  "Another identity not listed here": ["None","Ponytail (loose)","Ponytail (tight)","Bun","Natural loose","Braid","Other"]
+};
+
+function toggleRace(el) {
+  var name = el.getAttribute('data-sym');
+  // Only allow one race selection at a time
+  document.querySelectorAll('#raceList .check-item').forEach(function(item) {
+    item.classList.remove('selected');
+    item.querySelector('.check-box').style.background = '';
+    item.querySelector('.check-box').style.borderColor = '#AED6F1';
+  });
+  el.classList.add('selected');
+  el.querySelector('.check-box').style.background = '#5B4B8A';
+  el.querySelector('.check-box').style.borderColor = '#5B4B8A';
+  el.style.borderColor = '#5B4B8A';
+  el.style.background = '#DDD5F5';
+  raceSelections = [name];
+  styleSelections = [];
+  updateStylingOptions(name);
+}
+
+function updateStylingOptions(race) {
+  var options = STYLING_BY_RACE[race] || ["None","Ponytail (loose)","Bun","Natural loose","Braid","Other"];
+  var list = document.getElementById('styleList');
+  list.innerHTML = '';
+  options.forEach(function(opt) {
+    if(opt === 'None') return;
+    var div = document.createElement('div');
+    div.className = 'check-item';
+    div.setAttribute('data-sym', opt);
+    if(opt === 'Other') {
+      div.onclick = function() { toggleStyle(this); showStyleOther(this); }.bind(div);
+    } else {
+      div.onclick = function() { toggleStyle(this); };
+    }
+    div.style.cssText = 'border:1.5px solid #C9BEE8;background:#F7F5FF;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;margin-bottom:7px;transition:all 0.15s;';
+    div.innerHTML = '<div class="check-box" style="width:20px;height:20px;border:2px solid #C9BEE8;border-radius:4px;flex-shrink:0;transition:all 0.15s;"></div><div style="font-size:13px;color:#2D2350;">' + opt + '</div>';
+    list.appendChild(div);
+  });
+  // Add Other write-in at bottom
+  var writeDiv = document.createElement('div');
+  writeDiv.id = 'styleWriteIn';
+  writeDiv.style.cssText = 'display:none;margin-top:6px;';
+  writeDiv.innerHTML = '<input type="text" id="styleOtherText" placeholder="Please describe your styling practice..." style="width:100%;padding:11px 14px;border:1.5px solid #5B4B8A;border-radius:10px;font-family:DM Sans,sans-serif;font-size:13px;color:#2D2350;background:#FFFFFF;outline:none;">';
+  list.appendChild(writeDiv);
+}
+
+function showStyleOther(el) {
+  var writeIn = document.getElementById('styleWriteIn');
+  if(writeIn) {
+    writeIn.style.display = el.classList.contains('selected') ? 'block' : 'none';
+    if(el.classList.contains('selected')) {
+      setTimeout(function() {
+        var input = document.getElementById('styleOtherText');
+        if(input) input.focus();
+      }, 100);
+    }
+  }
+}
+
+function showWriteIn(id, el) {
+  var box = document.getElementById(id);
+  if(box) {
+    box.style.display = el.classList.contains('selected') ? 'block' : 'none';
+  }
+}
+
+function toggleTx(el) {
+  var name = el.getAttribute('data-tx');
+  // If No treatment selected clear all others
+  if(name === 'No current treatment') {
+    document.querySelectorAll('#treatmentList .check-item').forEach(function(item) {
+      item.classList.remove('selected');
+      var box = item.querySelector('.check-box');
+      if(box) { box.style.background=''; box.style.borderColor='#C9BEE8'; }
+      item.style.borderColor='#C9BEE8';
+      item.style.background='#F5F0FF';
+    });
+    treatmentSelections = [];
+    el.classList.add('selected');
+    var box = el.querySelector('.check-box');
+    if(box) { box.style.background='#5B4B8A'; box.style.borderColor='#5B4B8A'; }
+    el.style.borderColor='#5B4B8A';
+    el.style.background='#DDD5F5';
+    treatmentSelections = [name];
+    return;
+  }
+  // Remove No treatment if another selected
+  document.querySelectorAll('#treatmentList .check-item').forEach(function(item) {
+    if(item.getAttribute('data-tx') === 'No current treatment') {
+      item.classList.remove('selected');
+      var box = item.querySelector('.check-box');
+      if(box) { box.style.background=''; box.style.borderColor='#C9BEE8'; }
+      item.style.borderColor='#C9BEE8';
+      item.style.background='#F5F0FF';
+    }
+  });
+  treatmentSelections = treatmentSelections.filter(function(s) { return s !== 'No current treatment'; });
+
+  el.classList.toggle('selected');
+  var box = el.querySelector('.check-box');
+  if(el.classList.contains('selected')) {
+    if(treatmentSelections.indexOf(name) === -1) treatmentSelections.push(name);
+    el.style.borderColor='#5B4B8A';
+    el.style.background='#DDD5F5';
+    if(box) { box.style.background='#5B4B8A'; box.style.borderColor='#5B4B8A'; }
+  } else {
+    treatmentSelections = treatmentSelections.filter(function(s) { return s !== name; });
+    el.style.borderColor='#C9BEE8';
+    el.style.background='#F5F0FF';
+    if(box) { box.style.background=''; box.style.borderColor='#C9BEE8'; }
+  }
+}
+
+function toggleStyle(el) {
+  var name = el.getAttribute('data-sym');
+  el.classList.toggle('selected');
+  var box = el.querySelector('.check-box');
+  if(el.classList.contains('selected')) {
+    if(styleSelections.indexOf(name) === -1) styleSelections.push(name);
+    el.style.borderColor = '#1B2A4A';
+    el.style.background = '#EBF5FB';
+    if(box) { box.style.background = '#1B2A4A'; box.style.borderColor = '#1B2A4A'; }
+  } else {
+    styleSelections = styleSelections.filter(function(s) { return s !== name; });
+    el.style.borderColor = '#AED6F1';
+    el.style.background = '#F4F7FA';
+    if(box) { box.style.background = ''; box.style.borderColor = '#AED6F1'; }
+  }
 }
 
 // SYMPTOM CHECKLIST
@@ -914,8 +1223,12 @@ function calcQoL() {
 }
 
 // SUBMIT
-function submitEntry() {
+function goToHair() {
   calcQoL();
+  go('hair');
+}
+
+function submitEntry() {
   document.getElementById('overlay').classList.add('show');
   setTimeout(() => {
     document.getElementById('overlay').classList.remove('show');
@@ -926,6 +1239,36 @@ function submitEntry() {
 
 function buildOutput() {
   const now = new Date();
+  // Hair Profile
+  var raceOther = document.getElementById('raceOtherText') && document.getElementById('raceOtherText').value ? document.getElementById('raceOtherText').value : '';
+  var raceList = raceSelections.slice();
+  if(raceOther && raceList.indexOf('Another identity not listed here') > -1) {
+    raceList = raceList.map(function(r) { return r === 'Another identity not listed here' ? 'Other: ' + raceOther : r; });
+  }
+  var raceOut = raceList.length > 0 ? raceList.join(', ') : 'Not selected';
+  var styleOther = document.getElementById('styleOtherText') && document.getElementById('styleOtherText').value ? document.getElementById('styleOtherText').value : '';
+  var styleList = styleSelections.slice();
+  if(styleOther && styleList.indexOf('Other') > -1) {
+    styleList = styleList.map(function(s) { return s === 'Other' ? 'Other: ' + styleOther : s; });
+  }
+  var styleOut = styleList.length > 0 ? styleList.join(', ') : 'Not selected';
+  var txOther = document.getElementById('txOtherText') && document.getElementById('txOtherText').value ? document.getElementById('txOtherText').value : '';
+  var treatList = treatmentSelections.slice();
+  if(txOther && treatList.indexOf('Other') > -1) {
+    treatList = treatList.map(function(t) { return t === 'Other' ? 'Other: ' + txOther : t; });
+  }
+  var treatOut = treatList.length > 0 ? treatList.join(', ') : 'Not selected';
+  var onsetOut = document.getElementById('hairOnset') ? document.getElementById('hairOnset').value || 'Not provided' : 'Not provided';
+
+  // Update hair profile fields in output
+  var hpSection = document.getElementById('hairProfileOutput');
+  if(hpSection) {
+    document.getElementById('outRace').textContent = raceOut;
+    document.getElementById('outStyle').textContent = styleOut;
+    document.getElementById('outTreatment').textContent = treatOut;
+    document.getElementById('outOnset').textContent = onsetOut;
+  }
+
   document.getElementById('outDate').textContent = now.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}) + ' · ' + now.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
 
   // Symptoms
@@ -935,7 +1278,8 @@ function buildOutput() {
   var sevVal = parseInt(document.getElementById('sev').value) || 0; document.getElementById('outSev').textContent = sevVal + ' / 10';
 
   // Scalp & Pattern
-  document.getElementById('outScalp').textContent = document.getElementById('pattern').value || 'Not selected';
+  var patternVal = document.getElementById('pattern') ? document.getElementById('pattern').value || 'Not selected' : 'Not selected';
+  document.getElementById('outPattern').textContent = patternVal;
 
   // QoL
   const q1v = document.getElementById('q1').value;
